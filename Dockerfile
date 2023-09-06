@@ -1,7 +1,9 @@
-FROM python:latest
+FROM antitree/private-tor:latest
 
 WORKDIR /usr/local/bin
 
-COPY capturing.py .
+COPY breakfold.py .
+COPY requirements.txt .
+RUN pip install -r requirements.txt
 
-CMD ["capturing.py", "-OPTIONAL_FLAG"]
+CMD ["breakfold.py", "-https://a000.ex16.repl.co/"]
