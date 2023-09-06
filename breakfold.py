@@ -39,10 +39,11 @@ print("""\033[91m
 
 #tor_password = input("\033[92m Enter your tor password: \033[00m")
 
-address = input("\033[92m Enter blog address:  \033[00m")
+# address = input("\033[92m Enter blog address:  \033[00m")
+address = 'https://a000.ex16.repl.co/'
 
-views = int(input("\033[92m How many views you want: \033[00m"))
-
+# views = int(input("\033[92m How many views you want: \033[00m"))
+views = 10
 
 # signal Tor for new identity
 
