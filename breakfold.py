@@ -40,10 +40,18 @@ print("""\033[91m
 #tor_password = input("\033[92m Enter your tor password: \033[00m")
 
 # address = input("\033[92m Enter blog address:  \033[00m")
-address = 'https://a000.ex16.repl.co/'
+# address = 'https://a000.ex16.repl.co/'
 
 # views = int(input("\033[92m How many views you want: \033[00m"))
-views = 10
+# views = 10
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("-a", "--address", type=str)
+parser.add_argument("-v", "--views", type=int)
+args = parser.parse_args()
+views = args.views
+address= args.address
+
 
 # signal Tor for new identity
 
