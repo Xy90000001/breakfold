@@ -101,8 +101,9 @@ def visit():
 
 		session = tor_session()
 
-		session.get(address, headers=header)	#visiting the URL given by the user
-
+		# session.get(address, headers=header)	#visiting the URL given by the user
+		session.get(address, headers=header, verify=False)
+		
 		print("\033[92m-\033[00m" * 150)
 
 		print("\033[92m Page Visited with following ip with user-agent..\033[00m")
